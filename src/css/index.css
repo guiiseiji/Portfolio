@@ -107,18 +107,22 @@ body {
   border-radius: 50%;
   border: 10px solid #000;
   max-width: 300px;
+  max-height: fit-content;
   background: linear-gradient(to center, black, gray);
 }
 
 .home .foto.sombra-traco {
-    background: linear-gradient(to right, #8a35c8, #18c063, #00eea2);
+    background: linear-gradient(to right, #1f5805, #18c063, #32e605);
     background-size: 180% 180%;
     animation: gradient-animation 5s ease infinite;
   }
 
 .home .container-foto img {
   max-width: 100%;
+  height: auto;
   border-radius: 50%;
+  background-size: cover;
+  display: block;
 }
 
 .projetos {
@@ -154,11 +158,12 @@ body {
 }
 
 .projetos .projeto img {
-  height: 100%;
+  height: 500px;
 }
 
 .projetos .projeto h3 {
   background-color: #040203;
+  height: fit-content;
   width: 100%;
   padding-left: 10px;
   position: absolute;
@@ -169,8 +174,8 @@ body {
   background-color: #040203;
   position: absolute;
   top: 0;
+  height: fit-content;
   width: 100%;
-  height: 100%;
   opacity: 0;
   font-weight: 600;
   transition: 0.2s;
@@ -181,11 +186,15 @@ body {
   background-color: #000;   
 }
 
-.projetos .btn-mostrar-projetos {
+.projetos .container-projetos .projeto .informacoes-projeto p {
+  padding: 10px 20px;
+}
+
+.projetos .btn-mostrar-mais {
   background-color: none;
   border: 1px;
   border-radius: 15px;
-  color: #fff;
+  color: #040203;
   width: 180px;
   padding: 20px;
   font-size: 18px;
@@ -197,12 +206,13 @@ body {
   cursor: pointer;
 }
 
-.projetos .btn-mostrar-projetos:hover {
+.projetos .btn-mostrar-mais:hover {
   background-color: greenyellow;
   transition: 0.2s;
+  align-items: center;
 }
 
-.projetos .btn-mostrar-projetos.remover {
+.projetos .btn-mostrar-mais.remover {
   display: none;
 }
 
